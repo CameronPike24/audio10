@@ -99,6 +99,7 @@ class MyApp(App):
         # get the default audio input (mic on most cases)
         mic = get_input(callback=mic_callback)
         mic.start()
+        mic.poll()
         sample.play()
         print("we at sample play")
         #time.sleep(5)  #record for 3 seconds
