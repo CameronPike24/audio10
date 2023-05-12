@@ -105,7 +105,7 @@ class MyApp(App):
         #mic.stop()
         #sample.stop()
         btn1 = Button(text='Audio Record')
-        btn1.bind(on_press=bcallback)
+        btn1.bind(on_press=mic_callback)
         return btn1
 
 
