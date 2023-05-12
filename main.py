@@ -82,14 +82,7 @@ sample = AudioSample()
 stream.add_sample(sample)
 
 
-#define what happens on mic input with arg as buffer
-def mic_callback(buf):
-   
-    print('yeah we got', len(buf))
-    #HERE: How do I manipulate buf?
-    #modified_buf = function(buf)
-    #sample.write(modified_buf)
-    sample.write(buf)
+
 
 
 
@@ -108,6 +101,16 @@ class MyApp(App):
         btn1 = Button(text='Audio Record')
         btn1.bind(on_press=mic_callback)
         return btn1
+
+
+    #define what happens on mic input with arg as buffer
+    def mic_callback(buf):
+   
+        print('yeah we got', len(buf))
+        #HERE: How do I manipulate buf?
+        #modified_buf = function(buf)
+        #sample.write(modified_buf)
+        sample.write(buf)
 
 
 
